@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+	<meta charset="UTF-8">
+	<title>Top Sscroll Button</title>
+	<head>
+		<style type="text/css">
+			body {
+				height: 10000px;
+				background: black;
+			}
+			html {
+				scroll: smooth;
+			}
+			.up {
+				background: orange;
+				width: fit-content;
+				padding: 2px;
+				border-radius: 50%;
+				position: fixed;
+				bottom: 10px;
+				right: -30px;
+				margin-bottom: 10px;
+				transition: .3s;
+			}
+			.show {
+				right: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="up">Up</div>
+		<script type="text/javascript">
+		let up = document.querySelector(".up");
+		
+		onscroll = function() {
+			console.log(scrollY)
+			if (scrollY >= 1000) {
+				up.classList.add("show")
+			}else {
+				up.classList.remove("show")
+			}
+			up.onclick = function() {
+				scrollTo({
+					top: 0,
+					behavior: "smooth"
+				})
+			}
+		}
+		
+		</script>
+	</body>
+</html>

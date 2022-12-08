@@ -1,0 +1,21 @@
+body {
+	height: 10000px;
+	background: black;
+}
+html {
+	scroll: smooth;
+}
+.up {
+	background: orange;
+	width: fit-content;
+	padding: 2px;
+	border-radius: 50%;
+	position: fixed;
+	bottom: 10px;
+	right: -30px;
+	margin-bottom: 10px;
+	transition: .3s;
+}
+.show {
+	right: 10px;
+}
